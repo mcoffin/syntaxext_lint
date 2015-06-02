@@ -1,0 +1,8 @@
+[package]
+name = "syntaxext_lint"
+version = "0.1.0"
+authors = ["Matt Coffin <mcoffin13@gmail.com>"]
+
+[lib]
+name = "syntaxext_lint"
+plugin = true
