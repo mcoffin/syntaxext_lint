@@ -2,6 +2,13 @@
 name = "syntaxext_lint"
 version = "0.1.0"
 authors = ["Matt Coffin <mcoffin13@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "http://github.com/mcoffin/syntaxext_lint"
+homepage = "http://github.com/mcoffin/syntaxext_lint"
+description = """
+Common lints for creating syntax extensions
+"""
 
 [lib]
 name = "syntaxext_lint"
