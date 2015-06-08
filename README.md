@@ -1,4 +1,4 @@
-[![](http://meritbadge.herokuapp.com/syntaxext_lint)](https://crates.io/crates/syntaxext_lint)
+[![Build Status](https://travis-ci.org/hackndev/zinc.svg)](https://travis-ci.org/hackndev/zinc) [![](http://meritbadge.herokuapp.com/syntaxext_lint)](https://crates.io/crates/syntaxext_lint)
 
 # syntaxext_lint
 
