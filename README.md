@@ -1,4 +1,6 @@
-# syntaxext-lint
+[![](http://meritbadge.herokuapp.com/syntaxext_lint)](https://crates.io/crates/syntaxext_lint)
+
+# syntaxext_lint
 
 This crate provides common lints for use with making syntax extensions.
 
