@@ -7,7 +7,6 @@ extern crate syntax;
 extern crate rustc;
 
 use syntax::ast;
-use syntax::parse::token;
 use rustc::lint::{Context, LintPass, LintPassObject, LintArray};
 use rustc::plugin;
 use std::ops::Deref;
@@ -32,7 +31,7 @@ impl LintPass for Pass {
     fn check_expr(&mut self, cx: &Context, expr: &ast::Expr) {
         match expr.node {
             ast::ExprPath(None, ref path) => {
-                let name = token::get_ident(path.segments.last().unwrap().identifier);
+                let name = path.segments.last().unwrap().identifier.name.as_str();
                 if name.deref() == "DUMMY_SP" {
                     cx.span_lint(DUMMY_SPAN, expr.span,
                                  "usage of 'DUMMY_SP' is discouraged");
