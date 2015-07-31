@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mcoffin/syntaxext_lint.svg)](https://travis-ci.org/mcoffin/syntaxext_lint) [![](http://meritbadge.herokuapp.com/syntaxext_lint)](https://crates.io/crates/syntaxext_lint)
+[![Build Status](https://travis-ci.org/mcoffin/syntaxext_lint.svg?branch=master)](https://travis-ci.org/mcoffin/syntaxext_lint) [![](http://meritbadge.herokuapp.com/syntaxext_lint)](https://crates.io/crates/syntaxext_lint)
 
 # syntaxext_lint
 
