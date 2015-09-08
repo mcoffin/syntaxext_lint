@@ -5,8 +5,9 @@
 extern crate syntax;
 #[macro_use]
 extern crate rustc;
+extern crate rustc_front;
 
-use syntax::ast;
+use rustc_front::hir as ast;
 use rustc::lint::{Context, LintPass, LintPassObject, LintArray};
 use rustc::plugin;
 use std::ops::Deref;
