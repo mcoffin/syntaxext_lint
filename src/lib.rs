@@ -7,8 +7,8 @@ extern crate syntax;
 extern crate rustc;
 extern crate rustc_front;
 
-use rustc_front::hir as ast;
-use rustc::lint::{Context, LintPass, LintPassObject, LintArray};
+use syntax::ast as ast;
+use rustc::lint::{LintContext, EarlyContext, LintPass, EarlyLintPass, LintArray};
 use rustc::plugin;
 use std::ops::Deref;
 
@@ -28,8 +28,10 @@ impl LintPass for Pass {
     fn get_lints(&self) -> LintArray {
         lint_array!(DUMMY_SPAN)
     }
+}
 
-    fn check_expr(&mut self, cx: &Context, expr: &ast::Expr) {
+impl EarlyLintPass for Pass {
+    fn check_expr(&mut self, cx: &EarlyContext, expr: &ast::Expr) {
         match expr.node {
             ast::ExprPath(None, ref path) => {
                 let name = path.segments.last().unwrap().identifier.name.as_str();
@@ -45,5 +47,5 @@ impl LintPass for Pass {
 
 #[plugin_registrar]
 pub fn register_plugins(reg: &mut plugin::Registry) {
-    reg.register_lint_pass(Box::new(Pass::new()) as LintPassObject);
+    reg.register_early_lint_pass(Box::new(Pass::new()));
 }
