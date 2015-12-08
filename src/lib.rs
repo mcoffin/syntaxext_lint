@@ -6,11 +6,11 @@ extern crate syntax;
 #[macro_use]
 extern crate rustc;
 extern crate rustc_front;
+extern crate rustc_plugin;
 
 use rustc::lint::*;
 use rustc_front::hir::*;
 use rustc_front::hir as ast;
-use rustc::plugin;
 use std::ops::Deref;
 
 declare_lint!(DUMMY_SPAN,
@@ -47,6 +47,6 @@ impl LateLintPass for Pass {
 }
 
 #[plugin_registrar]
-pub fn register_plugins(reg: &mut plugin::Registry) {
+pub fn register_plugins(reg: &mut rustc_plugin::Registry) {
     reg.register_late_lint_pass(Box::new(Pass::new()) as LateLintPassObject);
 }
