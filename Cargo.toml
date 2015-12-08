@@ -1,6 +1,6 @@
 [package]
 name = "syntaxext_lint"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["Matt Coffin <mcoffin13@gmail.com>"]
 license = "MIT"
 readme = "README.md"
