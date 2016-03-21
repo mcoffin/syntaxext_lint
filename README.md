@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/mcoffin/syntaxext_lint.png?label=ready&title=Ready)](https://waffle.io/mcoffin/syntaxext_lint)
 [![Build Status](https://travis-ci.org/mcoffin/syntaxext_lint.svg?branch=master)](https://travis-ci.org/mcoffin/syntaxext_lint) [![](http://meritbadge.herokuapp.com/syntaxext_lint)](https://crates.io/crates/syntaxext_lint)
 
 # syntaxext_lint
