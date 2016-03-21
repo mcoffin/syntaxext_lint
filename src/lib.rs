@@ -9,7 +9,6 @@ extern crate rustc_front;
 extern crate rustc_plugin;
 
 use rustc::lint::*;
-use rustc_front::hir::*;
 use rustc_front::hir as ast;
 use std::ops::Deref;
 
