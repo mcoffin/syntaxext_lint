@@ -5,11 +5,10 @@
 extern crate syntax;
 #[macro_use]
 extern crate rustc;
-extern crate rustc_front;
 extern crate rustc_plugin;
 
 use rustc::lint::*;
-use rustc_front::hir as ast;
+use rustc::hir as ast;
 use std::ops::Deref;
 
 declare_lint!(DUMMY_SPAN,
