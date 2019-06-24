@@ -27,15 +27,20 @@ impl LintPass for Pass {
     fn get_lints(&self) -> LintArray {
         lint_array!(DUMMY_SPAN)
     }
+
+    fn name(&self) -> &'static str {
+        "syntaxext"
+    }
 }
 
-impl LateLintPass for Pass {
+impl LateLintPass<'_, '_> for Pass {
     fn check_expr(&mut self, cx: &LateContext, expr: &ast::Expr) {
         match expr.node {
-            ast::ExprPath(None, ref path) => {
-                let name = path.segments.last().unwrap().name.as_str();
+            ast::ExprKind::Path(ast::QPath::Resolved(None, ref path)) => {
+                let ident = path.segments.last().unwrap().ident;
+                let name = ident.name.as_str();
                 if name.deref() == "DUMMY_SP" {
-                    cx.span_lint(DUMMY_SPAN, expr.span,
+                    cx.span_lint(DUMMY_SPAN, ident.span,
                                  "usage of 'DUMMY_SP' is discouraged");
                 }
             },

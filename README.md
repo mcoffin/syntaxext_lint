@@ -5,6 +5,12 @@
 
 This crate provides common lints for use with making syntax extensions.
 
+## Status
+
+| Version | Nightly |
+| ------- | ------- |
+| `0.1.6` | 2019-06-24 |
+
 ## Current Lints
 
 | Lint Name | Description |
